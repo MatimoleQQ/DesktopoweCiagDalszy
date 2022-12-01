@@ -17,9 +17,9 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Right" FontSize="30" Margin="40">Podaj liczbe a</TextBlock>
-        <TextBox Grid.Row="0" Grid.Column="1"/>
+        <TextBox x:Name="tbox1" Margin="30" Grid.Row="0" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Right" Grid.Row="1" FontSize="30" Margin="40">Podaj liczbe b</TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="1"/>
-        <Button Grid.Row="2" Grid.ColumnSpan="2" Margin="60">Wcisnij  aby obliczyc NWD</Button>
+        <TextBox x:Name="tbox2" Margin="30" Grid.Row="1" Grid.Column="1"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Margin="50" Click="Button_Click">Wcisnij  aby obliczyc NWD</Button>
     </Grid>
 </Window>

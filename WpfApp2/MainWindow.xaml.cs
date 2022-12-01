@@ -24,5 +24,38 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(tbox1.Text, out int a) && int.TryParse(tbox2.Text, out int b)) 
+            {
+                string wypis;
+                int wynik = nwd(a, b);
+                if(wynik == 0)
+                {
+                    wypis = "nieskonczonosc";
+                }
+                else
+                {
+                    wypis = wynik.ToString();
+                }
+                MessageBox.Show(wypis,"Nwd:" ,MessageBoxButton.OK,MessageBoxImage.None) ;
+            }
+            else
+            {
+                MessageBox.Show("Wpisano poprawnie");
+            }
+        }
+        private int nwd(int x, int y)
+        {
+            while(y != 0)
+            {
+                int reszta= x%y ;
+                x = y;
+                y = reszta;
+               
+            }
+            return x;
+        }
     }
 }
